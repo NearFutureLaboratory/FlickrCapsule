@@ -87,20 +87,45 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 
 -(IBAction)getLastPicture:(id)sender
 {
-    [flickrRequest callAPIMethodWithGET:@"flickr.people.getPhotos" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"me", @"user_id", nil]];
+    NSDate *earlyDate = [NSDate dateWithTimeIntervalSinceNow:-31556926];
+    NSDate *laterDate = [NSDate dateWithTimeIntervalSinceNow:(-31556926 + 2629743)];
     
-  
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
+//    NSString *formattedDateString = [dateFormatter stringFromDate:date];
+//    NSLog(@"formattedDateString: %@", formattedDateString);
+    
+    
+    NSString *earlyString = [dateFormatter stringFromDate:earlyDate];
+    NSString *laterString = [dateFormatter stringFromDate:laterDate];
+//    [flickrRequest callAPIMethodWithGET:@"flickr.people.getPhotos" arguments:[NSDictionary dictionaryWithObjectsAndKeys:@"me", @"user_id", nil]];
+    
+    
+    
+    NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:@"me", @"user_id", earlyString,  @"min_taken_date", laterString, @"max_taken_date", nil];
+
+   // NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:@"me", @"user_id", nil];
+    
+    [flickrRequest callAPIMethodWithGET:@"flickr.people.getPhotos" arguments:args];
+
 }
+
+
 
 //FLICKR DELEGATE METHODS
 - (void)flickrAPIRequest:(OFFlickrAPIRequest *)inRequest didCompleteWithResponse:(NSDictionary *)inResponseDictionary
-{
+{    
     NSLog(@"got recent photos %@", inResponseDictionary);
+    
     
     NSDictionary *photos = [inResponseDictionary objectForKey:@"photos"];
     NSArray *photo = [photos objectForKey:@"photo"];
-    NSDictionary *lastPhoto = [photo lastObject];
+    NSNumber *randomNumber = [NSNumber numberWithInt:(arc4random() % [photo count])];
+    
+
+    
+    NSDictionary *lastPhoto = [photo objectAtIndex:[randomNumber intValue]];
     NSString *farm = [lastPhoto objectForKey:@"farm"];
     NSString *secret = [lastPhoto objectForKey:@"secret"];
     NSString *server = [lastPhoto objectForKey:@"server"];
