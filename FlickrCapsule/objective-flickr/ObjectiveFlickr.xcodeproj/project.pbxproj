@@ -513,7 +513,7 @@
 				6A86664C0F9593B300325E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6A8666B40F95959E00325E1C /* Build configuration list for PBXAggregateTarget "All" */ = {
 			isa = XCConfigurationList;
@@ -522,7 +522,7 @@
 				6A8666A80F95956A00325E1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6ABF72D40F939BB800B9179E /* Build configuration list for PBXProject "ObjectiveFlickr" */ = {
 			isa = XCConfigurationList;
@@ -531,7 +531,7 @@
 				6ABF72D30F939BB800B9179E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6ABF72EA0F939BE700B9179E /* Build configuration list for PBXNativeTarget "ObjectiveFlickr (library)" */ = {
 			isa = XCConfigurationList;
@@ -540,7 +540,7 @@
 				6ABF72E90F939BE700B9179E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

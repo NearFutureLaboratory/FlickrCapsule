@@ -88,7 +88,7 @@ NSString *kUploadImageStep = @"kUploadImageStep";
 -(IBAction)getLastPicture:(id)sender
 {
     NSDate *earlyDate = [NSDate dateWithTimeIntervalSinceNow:-31556926];
-    NSDate *laterDate = [NSDate dateWithTimeIntervalSinceNow:(-31556926 + 2629743)];
+    NSDate *laterDate = [NSDate dateWithTimeIntervalSinceNow:(-31556926 + 2629743/2)];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];

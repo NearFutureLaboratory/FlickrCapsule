@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Paf-TK-x8g">
-                                <rect key="frame" x="60" y="107" width="200" height="150"/>
+                                <rect key="frame" x="-8" y="0.0" width="336" height="315"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -46,6 +46,7 @@
         <class className="FCViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FCViewController.h"/>
             <relationships>
+                <relationship kind="action" name="getLastPicture:"/>
                 <relationship kind="outlet" name="lastImage" candidateClass="UIImageView"/>
             </relationships>
         </class>
