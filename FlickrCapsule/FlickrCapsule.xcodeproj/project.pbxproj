@@ -30,6 +30,8 @@
 		8A65E53C148321E3000B0890 /* ObjectiveFlickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A65E4E4148321E3000B0890 /* ObjectiveFlickr.m */; };
 		8A65E53D148321E3000B0890 /* OFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A65E4E6148321E3000B0890 /* OFUtilities.m */; };
 		8A65E53E148321E3000B0890 /* OFXMLMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A65E4E8148321E3000B0890 /* OFXMLMapper.m */; };
+		B92F92BA15432C0100609C91 /* PictureImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B92F92B915432C0100609C91 /* PictureImageView.m */; };
+		B92F92CA1544B8AE00609C91 /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B92F92C91544B8AD00609C91 /* ImageScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,10 @@
 		8A65E4E6148321E3000B0890 /* OFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFUtilities.m; sourceTree = "<group>"; };
 		8A65E4E7148321E3000B0890 /* OFXMLMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFXMLMapper.h; sourceTree = "<group>"; };
 		8A65E4E8148321E3000B0890 /* OFXMLMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OFXMLMapper.m; sourceTree = "<group>"; };
+		B92F92B815432C0100609C91 /* PictureImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureImageView.h; sourceTree = "<group>"; };
+		B92F92B915432C0100609C91 /* PictureImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureImageView.m; sourceTree = "<group>"; };
+		B92F92C81544B8AD00609C91 /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
+		B92F92C91544B8AD00609C91 /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +147,13 @@
 		8A65E31314831E1F000B0890 /* FlickrCapsule */ = {
 			isa = PBXGroup;
 			children = (
+				B92F92C81544B8AD00609C91 /* ImageScrollView.h */,
+				B92F92C91544B8AD00609C91 /* ImageScrollView.m */,
 				8A65E31C14831E1F000B0890 /* FCAppDelegate.h */,
 				8A65E31D14831E1F000B0890 /* FCAppDelegate.m */,
 				8A65E31F14831E1F000B0890 /* MainStoryboard.storyboard */,
+				B92F92B815432C0100609C91 /* PictureImageView.h */,
+				B92F92B915432C0100609C91 /* PictureImageView.m */,
 				8A65E32214831E1F000B0890 /* FCViewController.h */,
 				8A65E32314831E1F000B0890 /* FCViewController.m */,
 				8A65E31414831E1F000B0890 /* Supporting Files */,
@@ -247,7 +257,7 @@
 		8A65E30014831E1F000B0890 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Nodesnoop LLC";
 			};
 			buildConfigurationList = 8A65E30314831E1F000B0890 /* Build configuration list for PBXProject "FlickrCapsule" */;
@@ -322,6 +332,8 @@
 				8A65E53C148321E3000B0890 /* ObjectiveFlickr.m in Sources */,
 				8A65E53D148321E3000B0890 /* OFUtilities.m in Sources */,
 				8A65E53E148321E3000B0890 /* OFXMLMapper.m in Sources */,
+				B92F92BA15432C0100609C91 /* PictureImageView.m in Sources */,
+				B92F92CA1544B8AE00609C91 /* ImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
